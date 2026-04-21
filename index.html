@@ -665,6 +665,108 @@ footer {
 
 .hero-left { animation: fadeUp 0.7s ease both; }
 
+/* TOOLS & PROJECTS */
+.tools-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent-glow);
+  color: var(--warm);
+}
+
+.filter-btn.active {
+  background: var(--accent-dim);
+  border-color: rgba(61,255,160,0.4);
+  color: var(--accent);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.tool-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.2s;
+}
+
+.tool-card:hover { border-color: var(--accent-glow); }
+
+.tool-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tool-lang {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--accent);
+  background: var(--accent-dim);
+  padding: 3px 8px;
+  letter-spacing: 0.06em;
+  border: 1px solid rgba(61,255,160,0.2);
+}
+
+.tool-account {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.tool-name {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--warm);
+  letter-spacing: 0.02em;
+  word-break: break-word;
+}
+
+.tool-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.tool-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+  margin-top: 4px;
+}
+
+.tool-link:hover { color: var(--accent); }
+
+.tool-card.hidden { display: none; }
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   nav { padding: 16px 24px; }
@@ -673,6 +775,7 @@ footer {
   .hero-stats { grid-template-columns: 1fr 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .expertise-grid { grid-template-columns: 1fr; }
+  .tools-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .container { padding: 60px 24px; }
   footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
@@ -692,6 +795,7 @@ footer {
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#tools">Tools</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -841,12 +945,200 @@ footer {
 
   <div class="section-divider"></div>
 
+  <!-- TOOLS & PROJECTS -->
+
+  <section id="tools">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 — Tools & Projects</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="tools-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="grid">Grid AI & Power</button>
+        <button class="filter-btn" data-filter="llm">LLM & AI</button>
+        <button class="filter-btn" data-filter="data">Data Engineering</button>
+        <button class="filter-btn" data-filter="sas">SAS Migration</button>
+      </div>
+      <div class="tools-grid" id="toolsGrid">
+
+        <!-- Grid AI & Power Systems -->
+        <div class="tool-card" data-category="grid">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">Fahad021</span></div>
+          <div class="tool-name">Fault-Ride-Through & Islanding Detection</div>
+          <div class="tool-desc">Fault ride-through, islanding detection, and synchronization requirements for grid-connected inverters.</div>
+          <a href="https://github.com/Fahad021/Fault-Ride-Through--Islanding-Detection--and-Synchronization-Requirements" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="grid">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">Fahad021</span></div>
+          <div class="tool-name">data_centre_load_modeling</div>
+          <div class="tool-desc">Power load modeling and analysis for data centre infrastructure planning.</div>
+          <a href="https://github.com/Fahad021/data_centre_load_modeling" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="grid">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">Fahad021</span></div>
+          <div class="tool-name">Power-Grid-Operation-Technology</div>
+          <div class="tool-desc">Tools and scripts for power grid operations, monitoring, and technology integration.</div>
+          <a href="https://github.com/Fahad021/Power-Grid-Operation-Technology-" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="grid">
+          <div class="tool-card-top"><span class="tool-lang">MATLAB</span><span class="tool-account">Fahad021</span></div>
+          <div class="tool-name">Optimal-Charging-under-Vehicle-to-Grid</div>
+          <div class="tool-desc">Optimal EV charging strategy under Vehicle-to-Grid (V2G) constraints and grid signals.</div>
+          <a href="https://github.com/Fahad021/Optimal-Charging-under-Vehicle-to-Grid-" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="grid">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">Fahad021</span></div>
+          <div class="tool-name">LMP_Forecasting</div>
+          <div class="tool-desc">Locational marginal price (LMP) forecasting for day-ahead electricity markets.</div>
+          <a href="https://github.com/Fahad021/LMP_Forecasting" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="grid">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">datacode09</span></div>
+          <div class="tool-name">Ontario-grid-mapping</div>
+          <div class="tool-desc">Ontario electricity grid mapping and visualization using open-source geospatial data.</div>
+          <a href="https://github.com/datacode09/Ontario-grid-mapping-with-opensource-data" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="grid">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">datacode09</span></div>
+          <div class="tool-name">GIS Data Centre Tracking (Canada)</div>
+          <div class="tool-desc">GIS and satellite-based tracking of data centre locations and power footprints across Canada.</div>
+          <a href="https://github.com/datacode09/GIS-and-Satellite-based-tracking-of-data-centres-in-Canada" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <!-- LLM & AI -->
+        <div class="tool-card" data-category="llm">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">Fahad021</span></div>
+          <div class="tool-name">Email_intent_categorization_project</div>
+          <div class="tool-desc">Production LLM pipeline using Mistral 7B (llama.cpp) for email intent classification on enterprise contact center data.</div>
+          <a href="https://github.com/Fahad021/Email_intent_categorization_project" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="llm">
+          <div class="tool-card-top"><span class="tool-lang">PowerShell</span><span class="tool-account">Fahad021</span></div>
+          <div class="tool-name">Llama-cpp-python-installation-guide</div>
+          <div class="tool-desc">Automated installation guide and scripts for llama.cpp + Python bindings on Windows environments.</div>
+          <a href="https://github.com/Fahad021/Llama-cpp-python-installation-guide" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="llm">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">Fahad021</span></div>
+          <div class="tool-name">setup_azure_and_foundry</div>
+          <div class="tool-desc">Setup and configuration scripts for Azure AI Foundry, including model deployment and endpoint wiring.</div>
+          <a href="https://github.com/Fahad021/setup_azure_and_foundry" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="llm">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">datacode09</span></div>
+          <div class="tool-name">feature_store</div>
+          <div class="tool-desc">ML feature store implementation for managing, versioning, and serving features across model pipelines.</div>
+          <a href="https://github.com/datacode09/feature_store" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="llm">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">datacode09</span></div>
+          <div class="tool-name">extracting_data_from_freeform_text</div>
+          <div class="tool-desc">NLP pipeline for structured data extraction from unstructured freeform text sources.</div>
+          <a href="https://github.com/datacode09/extracting_data_from_freefrom_text" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <!-- Data Engineering -->
+        <div class="tool-card" data-category="data">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">Fahad021</span></div>
+          <div class="tool-name">cority_data_lake</div>
+          <div class="tool-desc">End-to-end data lake pipeline ingesting EHS data from the Cority platform into a cloud data warehouse.</div>
+          <a href="https://github.com/Fahad021/cority_data_lake" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="data">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">Fahad021</span></div>
+          <div class="tool-name">Snowflake_api_ingester</div>
+          <div class="tool-desc">REST API ingestion pipeline into Snowflake with batching, retry logic, and schema management.</div>
+          <a href="https://github.com/Fahad021/Snowflake_api_ingester" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="data">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">datacode09</span></div>
+          <div class="tool-name">banking_etl</div>
+          <div class="tool-desc">Banking data ETL pipeline for ingesting, transforming, and loading financial records into data platforms.</div>
+          <a href="https://github.com/datacode09/banking_etl" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="data">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">datacode09</span></div>
+          <div class="tool-name">spark_session_optimizer</div>
+          <div class="tool-desc">Utility for tuning and optimizing Apache Spark session configurations based on workload profiles.</div>
+          <a href="https://github.com/datacode09/spark_session_optimizer" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="data">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">datacode09</span></div>
+          <div class="tool-name">ingest_query_optimization</div>
+          <div class="tool-desc">Query optimization tooling for high-throughput data ingestion pipelines on distributed platforms.</div>
+          <a href="https://github.com/datacode09/ingest_query_optimization" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="data">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">datacode09</span></div>
+          <div class="tool-name">pyspark_etl_0001</div>
+          <div class="tool-desc">PySpark ETL framework template for scalable batch data processing on Hadoop/cloud clusters.</div>
+          <a href="https://github.com/datacode09/pyspark_etl_0001" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <!-- SAS Migration -->
+        <div class="tool-card" data-category="sas">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">datacode09</span></div>
+          <div class="tool-name">Chunked-sas-reader</div>
+          <div class="tool-desc">Memory-efficient SAS7BDAT file reader that processes large datasets in configurable chunks.</div>
+          <a href="https://github.com/datacode09/Chunked-sas-reader" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="sas">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">datacode09</span></div>
+          <div class="tool-name">Sas7bdat_to_parquet_converter</div>
+          <div class="tool-desc">Bulk converter from SAS7BDAT format to columnar Parquet for modern data lake ingestion.</div>
+          <a href="https://github.com/datacode09/Sas7bdat_to_parquet_converter" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="sas">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">datacode09</span></div>
+          <div class="tool-name">sas_streamer</div>
+          <div class="tool-desc">Streaming processor for SAS datasets enabling low-memory pipeline integration without full file loads.</div>
+          <a href="https://github.com/datacode09/sas_streamer" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="sas">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">datacode09</span></div>
+          <div class="tool-name">sas_to_python_mlops_etl</div>
+          <div class="tool-desc">Migration framework for converting legacy SAS ETL workflows into Python-based MLOps pipelines.</div>
+          <a href="https://github.com/datacode09/sas_to_python_mlops_etl" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+        <div class="tool-card" data-category="sas">
+          <div class="tool-card-top"><span class="tool-lang">Python</span><span class="tool-account">datacode09</span></div>
+          <div class="tool-name">sas_etl_to_hive</div>
+          <div class="tool-desc">Tooling to port SAS ETL logic to Apache Hive / HiveQL for Hadoop-based enterprise data platforms.</div>
+          <a href="https://github.com/datacode09/sas_etl_to_hive" target="_blank" class="tool-link">View on GitHub →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
   <!-- RESEARCH -->
 
   <section id="research">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">03 — Research</span>
+        <span class="section-tag">04 — Research</span>
         <div class="section-line"></div>
       </div>
       <div class="research-list">
@@ -910,7 +1202,7 @@ footer {
   <section id="contact">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">04 — Contact</span>
+        <span class="section-tag">05 — Contact</span>
         <div class="section-line"></div>
       </div>
       <div class="contact-grid">
@@ -974,6 +1266,19 @@ footer {
       Open to opportunities
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.tool-card').forEach(card => {
+          card.classList.toggle('hidden', filter !== 'all' && card.dataset.category !== filter);
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>

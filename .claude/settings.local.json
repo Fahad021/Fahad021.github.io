@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx -y @modelcontextprotocol/server-github --version)",
+      "Bash(where npx *)",
+      "Bash(claude mcp *)",
+      "Bash(powershell -Command \"& 'C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe' repo list Fahad021 --limit 50 --json name,description,topics 2>&1\")",
+      "Bash(powershell -Command \"& 'C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe' repo list Fahad021 --limit 50 --json name,description,primaryLanguage,repositoryTopics 2>&1\")",
+      "Bash(powershell -Command \"& 'C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe' repo list datacode09 --limit 50 --json name,description,primaryLanguage,repositoryTopics 2>&1\")"
+    ]
+  }
+}
