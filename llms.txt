@@ -1,0 +1,11 @@
+# Abul Hasan Fahad
+
+> Portfolio site for Abul Hasan Fahad, a power grid data and AI professional working across grid AI/ML, power systems engineering, and production AI/data platforms for electric utilities.
+
+## Main pages
+- [Home](https://fahad021.github.io/)
+- [About](https://fahad021.github.io/#about)
+- [Expertise](https://fahad021.github.io/#expertise)
+- [Tools & Projects](https://fahad021.github.io/#tools)
+- [Research](https://fahad021.github.io/#research)
+- [Contact](https://fahad021.github.io/#contact)
